@@ -1,0 +1,26 @@
+{
+  "name": "joybang",
+  "version": "1.0.0",
+  "description": "nextJS and ANTD to build an OA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chase-si/next.git"
+  },
+  "keywords": [
+    "nextJS"
+  ],
+  "author": "Chase",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chase-si/next/issues"
+  },
+  "homepage": "https://github.com/chase-si/next#readme",
+  "dependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  }
+}

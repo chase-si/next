@@ -1,1 +1,12 @@
-export default ()=> <div> Welcome! </div>
+export default ()=>
+  <div>
+    <style jsx> {
+      `div {
+        background: red
+      }`
+    }
+    </style>
+
+    Welcome!
+
+  </div>

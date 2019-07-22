@@ -1,12 +1,11 @@
-export default ()=>
-  <div>
-    <style jsx> {
-      `div {
-        background: red
-      }`
-    }
-    </style>
+import { AppContainer }  from './xxx'
 
-    Welcome!
+function Home (){
+  return (
+      <AppContainer >
+        wcs
+      </AppContainer>
+  )
+}
 
-  </div>
+export default Home;

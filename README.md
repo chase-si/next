@@ -1,2 +1,2 @@
 # next
-An OA system with NextJS and ANTD UI
+An OA system with NextJS and React16.8

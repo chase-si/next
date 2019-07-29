@@ -1,9 +1,13 @@
+import React from 'react'
 import { HomePageContainer } from './homePageStyle'
 
-export const HomePage = () => (
-  <HomePageContainer>
-    <div class="h1">
-      test
-    </div>
-  </HomePageContainer>
-)
+
+export class HomePage extends React.Component {
+  render() {
+    return (
+      <HomePageContainer ref = { homepage => this.homepage = homepage } >
+        tes
+      </HomePageContainer >
+    )
+  }
+}

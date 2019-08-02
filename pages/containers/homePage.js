@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 
 import { HomePageContainer } from './homePageStyle'
 
-
 export class HomePage extends React.Component {
   componentDidMount() {
     document.addEventListener('click', this.handleClick)
@@ -27,7 +26,7 @@ export class HomePage extends React.Component {
       <HomePageContainer 
         ref = { homepage => this.homepage = homepage }
       >
-        tes
+        test
       </HomePageContainer >
     )
   }

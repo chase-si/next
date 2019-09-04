@@ -4,15 +4,11 @@
     "es6": true,
     "node": true
   },
-  "globals": {
-    "Omise": true,
-    "Veritrans": true
-  },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended"
   ],
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
@@ -23,7 +19,7 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react"
+    "react", "@typescript-eslint"
   ],
   "rules": {
     "indent": ["error", 2],
@@ -32,6 +28,7 @@
     "quotes": ["error", "single"],
     "semi": ["error",  "never"],
     "space-before-blocks": ["error", "always"],
-    "react/display-name": [0, { "ignoreTranspilerName": true }]
+    "react/display-name": [0, { "ignoreTranspilerName": true }],
+    "comma-dangle": [2, "never"]
   }
 }

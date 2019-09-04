@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { AppContainer }  from './indexStyle'
 import { HomePage } from './containers/homePage'
 import { Select } from '../components/select'
 
@@ -11,7 +10,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <AppContainer >
+      <div >
         {this.state.showHomePage && <HomePage /> }
         <Select />
         <button onClick={() => {this.setState({showHomePage: true})}}>
@@ -21,7 +20,7 @@ class App extends React.Component {
         <button onClick={() => {this.setState({showHomePage: false})}}>
           hide  
         </button>
-      </AppContainer>
+      </div>
     )
   }
 }

@@ -1,2 +1,3 @@
 # next
-An OA system with NextJS and ANTD UI
+An OA system with `NextJS` and `Mobx`
+keywords: `style-components` `typescript`

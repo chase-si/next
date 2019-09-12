@@ -22,11 +22,20 @@ export default class Lottery extends React.Component<LoginProps, LoginState> {
   }
 
   constructor(props: LoginProps) {
-    super(props);
+    super(props)
     this.state = {
       userName: '',
       password: ''
     }
+  }
+
+  componentDidMount() {
+    this.getAPI()
+  }
+
+  getAPI = async () => {
+    const x = await fetch('https://webcdn.17app.co/campaign/pretest/data.json')
+    console.log(await x.json())
   }
 
   render() {

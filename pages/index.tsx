@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 import { HomePage } from './containers/homePage'
 import { Select } from '../components/select'
 
@@ -10,7 +11,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div >
+      <div>
         {this.state.showHomePage && <HomePage /> }
         <Select />
         <button onClick={() => {this.setState({showHomePage: true})}}>

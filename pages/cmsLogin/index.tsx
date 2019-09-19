@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { observable } from 'mobx'
-import { observer  } from 'mobx-react'
+import { observer, inject  } from 'mobx-react'
 
 import { LoginContainer } from './loginStyle'
-import { ItemContainer } from '../lottery/lotteryStyle'
+import { Request } from '../../lib/api/request'
 
 export interface LoginProps {
   testProps?: string
@@ -14,6 +14,8 @@ export interface LoginState {
   userName: string,
   password: string,
 }
+
+@inject('authStore')
 
 @observer 
 export default class Lottery extends React.Component<LoginProps, LoginState> {
@@ -40,13 +42,15 @@ export default class Lottery extends React.Component<LoginProps, LoginState> {
   }
 
   getAPI = async () => {
-    const x = await fetch('https://webcdn.17app.co/campaign/pretest/data.json')
-    this.testData = await x.json()
+    // const x = await fetch('https://webcdn.17app.co/campaign/pretest/data.json')
+    // this.testData = await x.json()
+    // const x = await Request.get('/')
+    console.log(123)
   }
 
-  componentDidUpdate() {
-    console.log(this.testData)
-  }
+  // componentDidUpdate() {
+  //   console.log(this.testData)
+  // }
 
   render() {
     return (
@@ -55,9 +59,9 @@ export default class Lottery extends React.Component<LoginProps, LoginState> {
           <input type="text" />
           <input type="text"/>
           <button>登录</button>
-          {this.testData.length > 0 && this.testData.map(item => (
+          {/* {this.testData.length > 0 && this.testData.map(item => (
             <div>{item.displayName}</div>
-            ))}
+          ))} */}
         </div>
       </LoginContainer>
     )

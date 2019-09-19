@@ -1,6 +1,7 @@
 import React from 'react'
+import { Provider } from 'mobx-react'
 
-
+import store from '../lib/stores'
 import { HomePage } from './containers/homePage'
 import { Select } from '../components/select'
 
@@ -11,17 +12,17 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.state.showHomePage && <HomePage /> }
-        <Select />
-        <button onClick={() => {this.setState({showHomePage: true})}}>
-          show  
-        </button>
+        <div>
+            {this.state.showHomePage && <HomePage /> }
+            <Select />
+            <button onClick={() => {this.setState({showHomePage: true})}}>
+              show  
+            </button>
 
-        <button onClick={() => {this.setState({showHomePage: false})}}>
-          hide  
-        </button>
-      </div>
+            <button onClick={() => {this.setState({showHomePage: false})}}>
+              hide  
+            </button>
+        </div>
     )
   }
 }

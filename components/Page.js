@@ -2,6 +2,12 @@ import React from 'react'
 import Link from 'next/link'
 import { inject, observer } from 'mobx-react'
 import Clock from './Clock'
+import styled from 'styled-components'
+
+const Title = styled.h1`
+  color: red;
+  font-size: 50px;
+`
 
 @inject('store') @observer
 class Page extends React.Component {
@@ -16,7 +22,7 @@ class Page extends React.Component {
   render () {
     return (
       <div>
-        <h1>{this.props.title}</h1>
+        <Title>{this.props.title}</Title>
         <Clock lastUpdate={this.props.store.lastUpdate} light={this.props.store.light} />
         <nav>
           <Link href={this.props.linkTo}><a>Navigate</a></Link>

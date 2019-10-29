@@ -9,7 +9,9 @@ const Title = styled.h1`
   font-size: 50px;
 `
 
-@inject('store') @observer
+@inject('store')
+
+@observer
 class Page extends React.Component {
   componentDidMount () {
     this.props.store.start()

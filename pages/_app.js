@@ -1,5 +1,4 @@
 import App from 'next/app'
-import React from 'react'
 import withMobxStore from '../lib/with-mobx-store'
 import { Provider } from 'mobx-react'
 

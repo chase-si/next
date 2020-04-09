@@ -30,7 +30,7 @@ export default class Lottery extends React.Component<LoginProps, LoginState> {
     }
   }
 
-  handleOnchange = e => {
+  handleOnchange = (e: any) => {
     this.setState({
       [e.target.name]: e.target.value
     })

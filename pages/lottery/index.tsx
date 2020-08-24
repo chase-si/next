@@ -5,7 +5,7 @@ import { LotteryContainer, ItemContainer } from './lotteryStyle'
 
 //next 找typescript相关编译依赖 @zeit/next-typescript
 //style-components 找@types/styled-components相关依赖
-//@types/react @types/react-dom z在typescript 相关 react下寻找依赖
+//@types/react @types/react-dom 在typescript 相关 react下寻找依赖
 
 export interface LotteryProps {
   ItemContainer: any,
@@ -28,7 +28,7 @@ export default class Lottery extends React.Component<LotteryProps, LotteryState>
   }
 
   constructor(props: LotteryProps) {
-    super(props);
+    super(props)
     this.state = {
       itemArray: [1, 2, 3, '中奖', 5],
       activeKey: 0
